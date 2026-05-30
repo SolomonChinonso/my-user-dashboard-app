@@ -24,7 +24,7 @@ const Navbar = () => {
      </div>
 
       <span>
-        {user?.username} ({user?.role})
+         ({user?.role}:  {user?.username})
       </span>
 
       <button onClick={handleLogout}>

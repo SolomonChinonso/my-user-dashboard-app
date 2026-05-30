@@ -1,4 +1,4 @@
-import "./pages.css"
+import "./global.css"
 
 const Settings = () => {
   return (

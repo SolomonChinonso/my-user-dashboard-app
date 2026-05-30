@@ -1,5 +1,5 @@
 import { useAuth } from "../hooks/useAuth";
-import "./pages.css"
+import "./global.css"
 
 const Profile = () => {
   const { user } = useAuth();

@@ -3,7 +3,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-
+import "./App.css"
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -19,7 +19,7 @@ function App() {
   const { user } = useAuth();
 
   return (
-    <div className="body">
+    <div className="app-section">
       {user && <Navbar />}
 
       <Routes>
