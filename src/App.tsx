@@ -4,15 +4,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import "./App.css"
-
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
-
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-
 import { useAuth } from "./hooks/useAuth";
 
 function App() {
@@ -23,7 +20,7 @@ function App() {
       {user && <Navbar />}
 
       <Routes>
-        {/* Redirect homepage to login */}
+        
         <Route
           path="/"
           element={<Navigate to="/login" replace />}
@@ -61,7 +58,7 @@ function App() {
           }
         />
 
-        {/* Catch-all route */}
+        
         <Route
           path="*"
           element={<Navigate to="/login" replace />}

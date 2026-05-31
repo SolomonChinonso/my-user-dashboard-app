@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import "./Navbar.css"
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -14,22 +15,26 @@ const Navbar = () => {
 
   return (
     <nav>
+      <div className="logo"><h2>LO</h2><h2>GO</h2></div>
      <div className="links">
-       <Link to="/dashboard">Dashboard</Link>
-      <Link to="/profile">Profile</Link>
+       <Link to="/dashboard">Dashboard|</Link>
+      <Link to="/profile">Profile|</Link>
 
       {user?.role === "Admin" && (
         <Link to="/settings">Settings</Link>
       )}
      </div>
 
-      <span>
-         ({user?.role}:  {user?.username})
+     <div className="profile">
+       <span>
+         <FaUserCircle size={35} />
+         {user?.role}: {user?.username}
       </span>
 
       <button onClick={handleLogout}>
         Logout
       </button>
+     </div>
     </nav>
   );
 };

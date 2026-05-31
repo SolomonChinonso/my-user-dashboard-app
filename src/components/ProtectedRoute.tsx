@@ -12,12 +12,12 @@ const ProtectedRoute = ({
 }: Props) => {
   const { user } = useAuth();
 
-  // Not logged in
+  
   if (!user) {
     return <Navigate to="/login" />;
   }
 
-  // Not admin
+  
   if (adminOnly && user.role !== "Admin") {
     return <Navigate to="/dashboard" />;
   }

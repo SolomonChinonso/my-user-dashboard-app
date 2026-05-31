@@ -1,52 +1,4 @@
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { useAuth } from "../hooks/useAuth";
-// import "./Login.css"
-
-// const Login = () => {
-//   const [username, setUsername] = useState("");
-//   const [role, setRole] = useState("Viewer");
-
-//   const { login } = useAuth();
-//   const navigate = useNavigate();
-
-//   const handleLogin = () => {
-//     login({
-//       username,
-//       role: role as "Admin" | "Editor" | "Viewer",
-//     });
-
-//     navigate("/dashboard");
-//   };
-
-//   return (
-//     <div className="login-page">
-//       <h1>Login</h1>
-
-//       <input
-//         type="text"
-//         placeholder="Username"
-//         value={username}
-//         onChange={(e) => setUsername(e.target.value)}
-//       />
-
-//       <select
-//         value={role}
-//         onChange={(e) => setRole(e.target.value)}
-//       >
-//         <option>Admin</option>
-//         <option>Editor</option>
-//         <option>Viewer</option>
-//       </select>
-
-//       <button onClick={handleLogin}>
-//         Login
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Login;
+import { FaUserCircle } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
@@ -75,7 +27,10 @@ const Login = () => {
         <p className="subtitle">
           Sign in to continue
         </p>
-
+        <span>
+          <FaUserCircle size={35} className="profile-pix" />
+          <p>Upload Image</p>
+        </span>
         <div className="form-group">
           <label>Username</label>
           <input

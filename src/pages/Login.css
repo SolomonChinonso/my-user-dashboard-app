@@ -1,26 +1,19 @@
-/* Full page layout */
 .login-page {
   min-height: 100vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: linear-gradient(
-    135deg,
-    #7e6598,
-    #5095cd
-  );
-
+  margin-top: 0;
   padding: 20px;
 }
 
-/* Login card */
 .login-card {
   width: 100%;
   max-width: 400px;
-  height: 70%;
+  height: 100%;
   background: #040717;
-  padding: 40px;
+  padding: 30px;
   border-radius: 50px 5px;
   display: flex;
   flex-direction: column;
@@ -32,8 +25,13 @@
   text-align: center;
 }
 
+.profile-pix{
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #5095cd;
+    color: #fbfcfe;
+}
 
-/* Heading */
 .login-card h1 {
   margin-bottom: 10px;
   color: #5095cd;
@@ -44,7 +42,6 @@
   margin-bottom: 30px;
 }
 
-/* Form group */
 .form-group {
     border: 2px solid #5095cd;
     width: 100%;
@@ -62,7 +59,6 @@
   color: #fbfcfe;
 }
 
-/* Inputs */
 .form-group input,
 .form-group select {
   padding: 12px;
@@ -82,7 +78,6 @@
     rgba(79, 70, 229, 0.15);
 }
 
-/* Button */
 .login-btn {
   width: 100%;
   padding: 14px;

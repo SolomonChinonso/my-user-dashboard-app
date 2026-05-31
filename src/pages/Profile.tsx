@@ -5,11 +5,14 @@ const Profile = () => {
   const { user } = useAuth();
 
   return (
-    <div>
-      <h1>Profile</h1>
+    <div className="page">
+      <div className="card">
+        <h1>Profile</h1>
 
-      <p>Name: {user?.username}</p>
-      <p>Role: {user?.role}</p>
+      <div className="welcome-box">
+      <h2 className="welcome-box">Name: {user?.username}</h2>
+      <p>Role: {user?.role}</p></div>
+      </div>
     </div>
   );
 };
